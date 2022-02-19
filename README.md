@@ -23,3 +23,40 @@ pip install psutil
 pip install h5py
 pip install seaborn
 ```
+## Data Preparation
+### SUN RGB-D Scene
+<a href="http://rgbd.cs.princeton.edu/" target="_blank">SUN RGB-D Scene</a> dataset is available <a href="http://rgbd.cs.princeton.edu/data/SUNRGBD.zip" target="_blank">here</a>. Keep the file structure as is after extracting the files. In addition, `allsplit.mat` and `SUNRGBDMeta.mat` files need to be downloaded from <a href="http://rgbd.cs.princeton.edu/data/SUNRGBDtoolbox.zip" target="_blank">the SUN RGB-D toolbox</a>. `allsplit.mat` file is under `SUNRGBDtoolbox/traintestSUNRGBD` and  `SUNRGBDMeta.mat` is under `SUNRGBDtoolbox/Metada`. Both files need to be placed under the root folder of SUN RGB-D dataset. E.g. :
+<pre>
+sunrgbd
+├── SUNRGBD
+│   ├── kv1 ...
+│   ├── kv2 ...
+│   ├── realsense ...
+│   ├── xtion ...
+├── allsplit.mat
+├── SUNRGBDMeta.mat
+</pre>
+The dataset is presented in a complex hierarchy. Therefore, it's adopted to the local system using the following commands: 
+
+```
+python utils/organize_sunrgb_scene.py --dataset "sunrgbd" --dataset-path <SUNRGBD ROOT PATH> 
+```
+This creates train/eval splits, copies RGB and depth files together with camera calibration parameters files for depth data under the corresponding split structure. Then, depth colorization is applied, which takes a couple of hours.
+```
+python utils/depth_colorize.py --dataset "sunrgbd" --dataset-path <SUNRGBD ROOT PATH> --features-root <ROOT PATH TO MODELS>
+```
+
+### NYUV2 RGB-D Scene
+<a href="https://cs.nyu.edu/~silberman/datasets/nyu_depth_v2.html" target="_blank">NYUV2 RGB-D Scene</a> dataset is available <a href="http://horatio.cs.nyu.edu/mit/silberman/nyu_depth_v2/nyu_depth_v2_labeled.mat" target="_blank">here</a>. In addition, `splits.mat` file needs to be downloaded from <a href="??" target="_blank">?? toolbox??</a> together with `sceneTypes.txt` from <a href="??" target="_blank">here</a>. The dataset structure should be something like below:
+<pre>
+nyuv2
+├── nyu_depth_v2_labeled.mat
+├── splits.mat
+├── sceneTypes.txt
+</pre>
+Unlike other datasets, the dataset is provided as a Matlab .mat file in `nyu_depth_v2_labeled.mat`. We use the provided in-painted depth maps and RGB images. Depth colorization can be applied as follows in order to prepare depth data offline.
+```
+python utils/depth_colorize.py --dataset "nyuv2" --dataset-path <NYUV2 ROOT PATH> --features-root <ROOT PATH TO MODELS>
+```
+### Fukuoka RGB-D Scene
+<a href="http://robotics.ait.kyushu-u.ac.jp/kyushu_datasets/indoor_rgbd.html" target="_blank">Fukuoka RGB-D Indoor Scene</a> dataset is used for the first time in the literature for benchmarking with this work.
