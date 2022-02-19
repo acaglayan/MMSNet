@@ -101,7 +101,7 @@ python main.py --dataset "nyuv2" --dataset-path <NYUV2 ROOT PATH> --models-root 
 python main.py --dataset "fukuoka" --dataset-path </Fukuoka ROOT PATH/> --models-root <ROOT PATH TO MODELS>
 ```
 ## Results
-Multi-modal performance comparison of this work (MMSNet) with the related methods on SUN RGB-D and NYUV2 Scene datasets in terms of accuracy (%).
+Multi-modal performance comparison of this work (MMSNet) with the related methods on SUN RGB-D, NYUV2 RGB-D, and Fukuoka RGB-D Scene datasets in terms of accuracy (%).
 Method | Paper | SUN RGB-D |  NYUV2 RGB-D | Fukuoka RGB-D |
 :-------:|:-------:|:-------:|:-------:|:-------:|
 Places CNN-RBF SVM | <a href="https://papers.nips.cc/paper/2014/hash/3fe94a002317b5f9259f82690aeea4cd-Abstract.html" target="_blank">NeurIPS’14</a> | 39.0 | - | -
