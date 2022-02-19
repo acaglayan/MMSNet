@@ -81,7 +81,7 @@ python utils/depth_colorize.py --dataset "fukuoka" --dataset-path </Fukuoka ROOT
 ```
 ## Evaluation
 ### Trained Models
-Trained models that give the results in the paper are provided as follows in the tree hierarchy.
+Trained models that give the results in the paper are provided as follows in the tree hierarchy. Download the models to run the evaluation code. Note that we share the used random weights here. However, it's possible to generate new random weights using the param `--reuse-randoms 0` (default 1). The results might change slightly (could be higher or lower). We discuss the effect of randomness in our previous paper <a href="https://authors.elsevier.com/a/1eXMb3qy-3WuW5" target="_blank">here</a>.
 <pre>
 models-features
 ├── models
@@ -94,3 +94,10 @@ models-features
 │   ├── <a href="https://drive.google.com/file/d/19_tV1bWwfyN4q3NOLm67MWlSPoEXaLRJ/view?usp=sharing" target="_blank">resnet101_reduction_random_weights.pkl</a>
 │   ├── <a href="https://drive.google.com/file/d/1UeZduyD8jo8aB_lLLOje2DVJfIN6VY9C/view?usp=sharing" target="_blank">resnet101_rnn_random_weights.pkl</a>
 </pre> 
+### Evaluation
+After data preparation and downloading the models, to evaluate to models on SUN RGB-D, NYUV2, and Fukuoka RGB-D, run the following commands:
+```
+python main.py --dataset "sunrgbd" --dataset-path </SUNRGBD ROOT PATH/> --models-root <ROOT PATH TO MODELS>
+python main.py --dataset "nyuv2" --dataset-path <NYUV2 ROOT PATH> --models-root <ROOT PATH TO MODELS>
+python main.py --dataset "fukuoka" --dataset-path </Fukuoka ROOT PATH/> --models-root <ROOT PATH TO MODELS>
+```
