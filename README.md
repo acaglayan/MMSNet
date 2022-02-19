@@ -128,3 +128,32 @@ ASK | <a href="https://ieeexplore.ieee.org/abstract/document/9337174" target="_b
 TRecgNet Aug | <a href="https://link.springer.com/article/10.1007/s11263-021-01475-7" target="_blank">IJCV’21</a> | 59.8 | 71.8 | - 
 CNN-randRNN | <a href="https://authors.elsevier.com/a/1eXMb3qy-3WuW5" target="_blank">CVIU’22</a> | 60.7 | 69.1 | 78.3
 <b> MMSNet </b> | <b>This work</b> | <b>62.0</b> | <b>72.2</b> | <b>81.7</b>
+
+## Citation
+If you find this work useful in your research, please cite the following papers:
+```
+@article{Caglayan2022MMSNet,
+    title={MMSNet: Multi-Modal Scene Recognition Using Multi-Scale Encoded Features},
+    journal = {SSRN},
+    author={Ali Caglayan and Nevrez Imamoglu and Ryosuke Nakamura},
+    doi = {http://dx.doi.org/10.2139/ssrn.4032570 },
+    year={2022}
+}
+
+@article{Caglayan2022CNNrandRNN,
+    title={When CNNs meet random RNNs: Towards multi-level analysis for RGB-D object and scene recognition},
+    journal = {Computer Vision and Image Understanding},
+    author={Ali Caglayan and Nevrez Imamoglu and Ahmet Burak Can and Ryosuke Nakamura},
+    volume = {217},
+    pages = {103373},
+    issn = {1077-3142},
+    doi = {https://doi.org/10.1016/j.cviu.2022.103373},
+    year={2022}
+}
+```
+
+## License
+This project is released under the MIT License (see the LICENSE file for details).
+
+## Acknowledgment
+This  paper  is  based  on  the  results  obtained  from  a  project commissioned by the New Energy and Industrial Technology Development Organization (NEDO).
