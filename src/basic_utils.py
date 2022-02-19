@@ -116,8 +116,8 @@ def get_params():
     parser.add_argument("--dataset-path", dest="dataset_path", default="/path/",
                         # /SunRGBD/  /nyuv2/  /fukuoka/
                         help="Path to the data root")
-    parser.add_argument("--features-root", dest="features_root", default="models-features",
-                        help="Root folder for CNN features to load/save")
+    parser.add_argument("--models-root", dest="features_root", default="models-features",
+                        help="Root folder for models to load/save")
     parser.add_argument("--num-rnn", dest="num_rnn", default=128, type=int, help="Number of RNN")
     parser.add_argument("--reuse-randoms", dest="reuse_randoms", default=1, choices=[0, 1], type=int,
                         help="Handles whether the random weights are gonna save/load or not")
