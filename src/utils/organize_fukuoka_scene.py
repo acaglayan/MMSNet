@@ -2,7 +2,7 @@ import os
 import pathlib
 import shutil
 
-from basic_utils import Constants, DataTypesFukuoka
+from basic_utils import get_params, Constants, DataTypesFukuoka
 
 
 def fukuoka_copy(png_depth_file_count, category, instance, instance_path, eval_root):
@@ -37,9 +37,9 @@ def fukuoka_copy(png_depth_file_count, category, instance, instance_path, eval_r
 # Study_rooms: http://robotics.ait.kyushu-u.ac.jp/~kurazume/data_research/studyrooms.tar.gz     343.7 MB
 # Toilets: http://robotics.ait.kyushu-u.ac.jp/~kurazume/data_research/toilets.tar.gz            121.4 MB
 
-def organize_dataset():
-    root_path = "???/fukuoka/public_set/"	# custom paths
-    eval_root = "???/fukuoka/eval-set/"
+def organize_dataset(params):
+    root_path = params.dataset_path	+ "fukuoka/"
+    eval_root = params.dataset_path	+ "eval-set/"
 
     if not os.path.exists(eval_root):
         os.makedirs(eval_root)
@@ -65,4 +65,5 @@ def organize_dataset():
 
 
 if __name__ == '__main__':
-    organize_dataset()
+    param = get_params()
+    organize_dataset(param)
