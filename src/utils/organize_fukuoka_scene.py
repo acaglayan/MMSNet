@@ -38,8 +38,8 @@ def fukuoka_copy(png_depth_file_count, category, instance, instance_path, eval_r
 # Toilets: http://robotics.ait.kyushu-u.ac.jp/~kurazume/data_research/toilets.tar.gz            121.4 MB
 
 def organize_dataset(params):
-    root_path = params.dataset_path	+ "fukuoka/"
-    eval_root = params.dataset_path	+ "eval-set/"
+    root_path = params.dataset_path + "fukuoka/"
+    eval_root = params.dataset_path + "eval-set/"
 
     if not os.path.exists(eval_root):
         os.makedirs(eval_root)
