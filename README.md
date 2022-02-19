@@ -100,3 +100,31 @@ python main.py --dataset "sunrgbd" --dataset-path </SUNRGBD ROOT PATH/> --models
 python main.py --dataset "nyuv2" --dataset-path <NYUV2 ROOT PATH> --models-root <ROOT PATH TO MODELS>
 python main.py --dataset "fukuoka" --dataset-path </Fukuoka ROOT PATH/> --models-root <ROOT PATH TO MODELS>
 ```
+## Results
+Multi-modal performance comparison of this work (MMSNet) with the related methods on SUN RGB-D and NYUV2 Scene datasets in terms of accuracy (%).
+Method | Paper | SUN RGB-D |  NYUV2 RGB-D |
+:-------:|:-------:|:-------:|:-------:|
+Places CNN-RBF SVM | <a href="https://papers.nips.cc/paper/2014/hash/3fe94a002317b5f9259f82690aeea4cd-Abstract.html" target="_blank">NeurIPS’14</a> | 39.0 | -
+SS-CNN-R6 | <a href="https://ieeexplore.ieee.org/abstract/document/7487381" target="_blank">ICRA’16</a> | 41.3 | - 
+DMFF | <a href="https://openaccess.thecvf.com/content_cvpr_2016/html/Zhu_Discriminative_Multi-Modal_Feature_CVPR_2016_paper.html" target="_blank">CVPR’16</a> | 41.5 | -
+Places CNN-RCNN | <a href="https://www.cv-foundation.org/openaccess/content_cvpr_2016/html/Wang_Modality_and_Component_CVPR_2016_paper.html" target="_blank">CVPR’16</a> | 48.1 | 63.9
+MSMM | <a href="https://www.ijcai.org/proceedings/2017/0631.pdf" target="_blank">IJCAI’17</a> | 52.3 | 66.7
+RGB-D-CNN  | <a href="https://www.aaai.org/ocs/index.php/AAAI/AAAI17/paper/viewPaper/14695" target="_blank">AAAI’17</a> | 52.4 | 65.8
+D-BCNN | <a href="https://www.sciencedirect.com/science/article/abs/pii/S0921889016304225" target="_blank">RAS’17</a> | 55.5 | 64.1
+MDSI-CNN | <a href="https://ieeexplore.ieee.org/abstract/document/8022892" target="_blank">TPAMI’18</a> | 45.2 | 50.1
+DF2Net | <a href="https://ojs.aaai.org/index.php/AAAI/article/view/12292" target="_blank">AAAI’18</a> | 54.6 | 65.4
+HP-CNN-T | <a href="https://link.springer.com/article/10.1007/s10514-018-9776-8" target="_blank">Auton.’19</a> | 42.2 | -
+LM-CNN | <a href="https://link.springer.com/article/10.1007/s12559-018-9580-y" target="_blank">Cogn. Comput.’19</a> | 48.7 | -
+RGB-D-OB | <a href="https://ieeexplore.ieee.org/abstract/document/8476560" target="_blank">TIP’19</a> | 53.8 | 67.5
+Cross-Modal Graph | <a href="https://ojs.aaai.org/index.php/AAAI/article/view/4952" target="_blank">AAAI’19</a> | 55.1 | 67.4
+RAGC | <a href="https://openaccess.thecvf.com/content_ICCVW_2019/html/GMDL/Mosella-Montoro_Residual_Attention_Graph_Convolutional_Network_for_Geometric_3D_Scene_Classification_ICCVW_2019_paper.html" target="_blank">ICCVW’19</a> | 42.1 | -
+MAPNet | <a href="https://www.sciencedirect.com/science/article/abs/pii/S003132031930069X" target="_blank">PR’19</a> | 56.2 | 67.7
+TRecgNet Aug | <a href="https://openaccess.thecvf.com/content_CVPR_2019/html/Du_Translate-to-Recognize_Networks_for_RGB-D_Scene_Recognition_CVPR_2019_paper.html" target="_blank">CVPR’19</a> | 56.7 | 69.2
+G-L-SOOR | <a href="https://ieeexplore.ieee.org/abstract/document/8796408" target="_blank">TIP’20</a> | 55.5 | 67.4
+MSN | <a href="https://www.sciencedirect.com/science/article/abs/pii/S0925231219313347" target="_blank">Neurocomp.’20</a> | 56.2 | 68.1
+CBCL | <a href="https://www.bmvc2020-conference.com/conference/papers/paper_0063.html" target="_blank">BMVC’20</a> | 59.5 | 70.9
+ASK | <a href="https://ieeexplore.ieee.org/abstract/document/9337174" target="_blank">TIP’21</a> | 57.3 | 69.3
+2D-3D FusionNet | <a href="https://www.sciencedirect.com/science/article/pii/S1566253521001032" target="_blank">Inf. Fusion’21</a> | 58.6 | <b>75.1</b>
+TRecgNet Aug | <a href="https://link.springer.com/article/10.1007/s11263-021-01475-7" target="_blank">IJCV’21</a> | 59.8 | 71.8
+CNN-randRNN | <a href="https://authors.elsevier.com/a/1eXMb3qy-3WuW5" target="_blank">CVIU’22</a> | 60.7 | 69.1
+<b> MMSNet </b> | <b>This work</b> | <b>62.0</b> | <b>72.2</b>
