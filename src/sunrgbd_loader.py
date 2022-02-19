@@ -17,9 +17,9 @@ from model_utils import get_data_transform
 def sunrgbd_loader(path, data_type, params):
     if data_type == DataTypesSUNRGBD.Depth:
         temp = path.split('/')
-        results_dir = params.features_root + params.dataset + '/' + Constants.COLORIZED_DEPTH_SAVE + '/' + temp[-2]
+        results_dir = params.features_root + params.dataset + '/' + Constants.COLORIZED_DEPTH_SAVE + '/' + temp[-2] + '/'
         if os.path.exists(results_dir):  # check whether the colorized depth data has been saved offline
-            filename = temp[-2] + '/' + temp[-1]
+            filename = temp[-1]
             filename = filename[:-len('.png')]
             img_path = results_dir + filename + '.hdf5'
             img_file = h5py.File(img_path, 'r')
