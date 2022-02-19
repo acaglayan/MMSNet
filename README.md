@@ -79,3 +79,18 @@ Then, depth colorization is applied similar to other dataset usages.
 ```
 python utils/depth_colorize.py --dataset "fukuoka" --dataset-path </Fukuoka ROOT PATH/> --models-root <ROOT PATH TO MODELS>
 ```
+## Evaluation
+### Trained Models
+Trained models that give the results in the paper are provided as follows in the tree hierarchy.
+<pre>
+models-features
+├── models
+│   ├── <a href="https://drive.google.com/file/d/1O_Jj9PH2id07SCPFkpRF5UQKr_YAWFCL/view?usp=sharing" target="_blank">resnet101_sun_rgb_best_checkpoint.pth</a>
+│   ├── <a href="https://drive.google.com/file/d/1OjPGjxZW4lUdOucJ2Pix80HaNYtOajv9/view?usp=sharing" target="_blank">resnet101_sun_depth_best_checkpoint.pth</a>
+│   ├── <a href="https://drive.google.com/file/d/1DZm4l5kP03AtWlyGvy6IXhZI1cf6tzeN/view?usp=sharing" target="_blank">sunrgbd_mms_best_checkpoint.pth</a>
+│   ├── <a href="https://drive.google.com/file/d/1sM7owsRVi_6r0VdT2JU7gX8v7qH1ugEZ/view?usp=sharing" target="_blank">nyuv2_mms_best_checkpoint.pth</a>
+│   ├── <a href="https://drive.google.com/file/d/1EtgJsWDXr1QslHqkOlLBfukiP3Sf8bfW/view?usp=sharing" target="_blank">fukuoka_mms_best_checkpoint.pth</a>
+├── random_weights
+│   ├── <a href="https://drive.google.com/file/d/19_tV1bWwfyN4q3NOLm67MWlSPoEXaLRJ/view?usp=sharing" target="_blank">resnet101_reduction_random_weights.pkl</a>
+│   ├── <a href="https://drive.google.com/file/d/1UeZduyD8jo8aB_lLLOje2DVJfIN6VY9C/view?usp=sharing" target="_blank">resnet101_rnn_random_weights.pkl</a>
+</pre> 
