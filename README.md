@@ -39,11 +39,11 @@ sunrgbd
 The dataset is presented in a complex hierarchy. Therefore, it's adopted to the local system using the following commands: 
 
 ```
-python utils/organize_sunrgb_scene.py --dataset "sunrgbd" --dataset-path <SUNRGBD ROOT PATH> 
+python utils/organize_sunrgb_scene.py --dataset-path </SUNRGBD ROOT PATH/> 
 ```
 This creates train/eval splits, copies RGB and depth files together with camera calibration parameters files for depth data under the corresponding split structure. Then, depth colorization is applied, which takes a couple of hours.
 ```
-python utils/depth_colorize.py --dataset "sunrgbd" --dataset-path <SUNRGBD ROOT PATH> --features-root <ROOT PATH TO MODELS>
+python utils/depth_colorize.py --dataset "sunrgbd" --dataset-path </SUNRGBD ROOT PATH/> --models-root <ROOT PATH TO MODELS>
 ```
 
 ### NYUV2 RGB-D Scene
@@ -56,7 +56,25 @@ nyuv2
 </pre>
 Unlike other datasets, the dataset is provided as a Matlab .mat file in `nyu_depth_v2_labeled.mat`. We use the provided in-painted depth maps and RGB images. Depth colorization can be applied as follows in order to prepare depth data offline.
 ```
-python utils/depth_colorize.py --dataset "nyuv2" --dataset-path <NYUV2 ROOT PATH> --features-root <ROOT PATH TO MODELS>
+python utils/depth_colorize.py --dataset "nyuv2" --dataset-path <NYUV2 ROOT PATH> --models-root <ROOT PATH TO MODELS>
 ```
 ### Fukuoka RGB-D Scene
-<a href="http://robotics.ait.kyushu-u.ac.jp/kyushu_datasets/indoor_rgbd.html" target="_blank">Fukuoka RGB-D Indoor Scene</a> dataset is used for the first time in the literature for benchmarking with this work. There are 6 categories: <a href="http://robotics.ait.kyushu-u.ac.jp/~kurazume/data_research/corridors.tar.gz" target="_blank">Corridor</a>, <a href="http://robotics.ait.kyushu-u.ac.jp/~kurazume/data_research/kitchens.tar.gz" target="_blank">kitchen</a>, <a href="http://robotics.ait.kyushu-u.ac.jp/~kurazume/data_research/labs.tar.gz" target="_blank">lab</a>, <a href="http://robotics.ait.kyushu-u.ac.jp/~kurazume/data_research/offices.tar.gz" target="_blank">office</a>, <a href="http://robotics.ait.kyushu-u.ac.jp/~kurazume/data_research/studyrooms.tar.gz" target="_blank">study_room</a>, and <a href="http://robotics.ait.kyushu-u.ac.jp/~kurazume/data_research/toilets.tar.gz" target="_blank">toilet</a>.
+<a href="http://robotics.ait.kyushu-u.ac.jp/kyushu_datasets/indoor_rgbd.html" target="_blank">Fukuoka RGB-D Indoor Scene</a> dataset is used for the first time in the literature for benchmarking with this work. There are 6 categories: <a href="http://robotics.ait.kyushu-u.ac.jp/~kurazume/data_research/corridors.tar.gz" target="_blank">Corridor</a>, <a href="http://robotics.ait.kyushu-u.ac.jp/~kurazume/data_research/kitchens.tar.gz" target="_blank">kitchen</a>, <a href="http://robotics.ait.kyushu-u.ac.jp/~kurazume/data_research/labs.tar.gz" target="_blank">lab</a>, <a href="http://robotics.ait.kyushu-u.ac.jp/~kurazume/data_research/offices.tar.gz" target="_blank">office</a>, <a href="http://robotics.ait.kyushu-u.ac.jp/~kurazume/data_research/studyrooms.tar.gz" target="_blank">study_room</a>, and <a href="http://robotics.ait.kyushu-u.ac.jp/~kurazume/data_research/toilets.tar.gz" target="_blank">toilet</a>. The files should be extracted in a folder (e.g. `fukuoka`). The dataset structure should be something like below:
+<pre>
+fukuoka
+├── fukuoka
+│   ├── corridors ...
+│   ├── kitchens ...
+│   ├── labs ...
+│   ├── offices ...
+│   ├── studyrooms ...
+│   ├── toilets ...
+</pre> 
+The dataset is organized using the following command, which creates `eval-set` under root `fukuoka` folder:
+```
+python utils/organize_fukuoka_scene.py --dataset-path </Fukuoka ROOT PATH/> 
+```
+Then, depth colorization is applied similar to other dataset usages.
+```
+python utils/depth_colorize.py --dataset "fukuoka" --dataset-path </Fukuoka ROOT PATH/> --models-root <ROOT PATH TO MODELS>
+```
