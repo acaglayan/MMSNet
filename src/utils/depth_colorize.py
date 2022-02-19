@@ -56,8 +56,9 @@ def colorize_nyuv2(params, results_dir):
 def colorize_sunrgbd(params, results_dir):
     data_path = os.path.join(params.dataset_path, 'eval-set/')
     suffix = '*.pkl'
+    root_path = results_dir
     for split in ["eval", "train"]:
-        results_dir = results_dir + split + '/'
+        results_dir = root_path + split + '/'
         if not os.path.exists(results_dir):
             os.makedirs(results_dir)
 
@@ -75,7 +76,7 @@ def colorize_sunrgbd(params, results_dir):
 
 def colorize_depth_sets(params):
 
-    results_dir = '../../' + params.features_root + '/' + params.dataset + '/' + Constants.COLORIZED_DEPTH_SAVE + '/'
+    results_dir = params.features_root + '/' + params.dataset + '/' + Constants.COLORIZED_DEPTH_SAVE + '/'
     if not os.path.exists(results_dir):
         os.makedirs(results_dir)
 
