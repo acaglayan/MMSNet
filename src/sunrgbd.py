@@ -58,7 +58,7 @@ def _is_category_available(cat_name):
 def load_props(params, path, split):
     end_ind = path.rfind('\\') - 1
     rel_seq_path = path.split('SUNRGBD')[1][:end_ind]
-    data_path = os.path.join(params.dataset_path, 'public_set')
+    data_path = os.path.join(params.dataset_path, 'SUNRGBD')
     instance_path = data_path + rel_seq_path
 
     label = np.loadtxt(os.path.join(instance_path, 'scene.txt'), dtype=str)
