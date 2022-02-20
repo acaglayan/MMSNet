@@ -113,10 +113,10 @@ def get_params():
     parser = argparse.ArgumentParser(formatter_class=argparse.ArgumentDefaultsHelpFormatter)
     parser.add_argument("--dataset", dest="dataset", default="sunrgbd", choices=["sunrgbd", "nyuv2", "fukuoka"],
                         help="SUN RGB-D Scene [sunrgbd], NYU V2 Scene [nyuv2], or Fukuoka RGB-D Indoor Scene [fukuoka]")
-    parser.add_argument("--dataset-path", dest="dataset_path", default="/media/gsrt/144AAC7A4AAC59EE/alic_files/datasets/sunrgbd/",
-                        # /media/gsrt/144AAC7A4AAC59EE/alic_files/datasets/sunrgbd/  /media/gsrt/144AAC7A4AAC59EE/alic_files/datasets/nyuv2/  /media/gsrt/144AAC7A4AAC59EE/alic_files/datasets/fukuoka/
+    parser.add_argument("--dataset-path", dest="dataset_path", default="/datasets/sunrgbd/",
+                        # /sunrgbd/  /nyuv2/  /fukuoka/
                         help="Path to the data root")
-    parser.add_argument("--models-path", dest="models_path", default="/media/gsrt/144AAC7A4AAC59EE/alic_files/mmsnet",
+    parser.add_argument("--models-path", dest="models_path", default="/mmsnet",
                         help="Root folder for CNN features to load/save")
     parser.add_argument("--num-rnn", dest="num_rnn", default=128, type=int, help="Number of RNN")
     parser.add_argument("--reuse-randoms", dest="reuse_randoms", default=1, choices=[0, 1], type=int,
