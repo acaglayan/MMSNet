@@ -47,7 +47,7 @@ python utils/depth_colorize.py --dataset "sunrgbd" --dataset-path <SUNRGBD ROOT 
 ```
 
 ### NYUV2 RGB-D Scene
-<a href="https://cs.nyu.edu/~silberman/datasets/nyu_depth_v2.html" target="_blank">NYUV2 RGB-D Scene</a> dataset is available <a href="http://horatio.cs.nyu.edu/mit/silberman/nyu_depth_v2/nyu_depth_v2_labeled.mat" target="_blank">here</a>. In addition, `splits.mat` file needs to be downloaded from <a href="??" target="_blank">?? toolbox??</a> together with `sceneTypes.txt` from <a href="https://github.com/acaglayan/MMSNet/blob/main/data/sceneTypes.txt" target="_blank">here</a>. The dataset structure should be something like below:
+<a href="https://cs.nyu.edu/~silberman/datasets/nyu_depth_v2.html" target="_blank">NYUV2 RGB-D Scene</a> dataset is available <a href="http://horatio.cs.nyu.edu/mit/silberman/nyu_depth_v2/nyu_depth_v2_labeled.mat" target="_blank">here</a>. In addition, `splits.mat` file needs to be downloaded from <a href="http://horatio.cs.nyu.edu/mit/silberman/indoor_seg_sup/splits.mat" target="_blank">here</a> together with `sceneTypes.txt` from <a href="https://github.com/acaglayan/MMSNet/blob/main/data/sceneTypes.txt" target="_blank">here</a>. The dataset structure should be something like below:
 <pre>
 NYUV2 ROOT PATH
 ├── nyu_depth_v2_labeled.mat
