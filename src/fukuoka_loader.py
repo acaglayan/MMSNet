@@ -16,7 +16,7 @@ from depth_utils import colorized_surfnorm_fukuoka
 
 def fukuoka_loader(path, data_type, params):
     if data_type == DataTypesFukuoka.Depth:
-        results_dir = params.features_root + params.dataset + '/' + Constants.COLORIZED_DEPTH_SAVE + '/'
+        results_dir = params.dataset_path + '/' + Constants.COLORIZED_DEPTH_SAVE + '/'
         if os.path.exists(results_dir):  # check whether the colorized depth data has been saved offline
             filename = path.split('/')[-1]
             filename = filename[:filename.find('.')]

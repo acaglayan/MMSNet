@@ -36,7 +36,7 @@ class NYUV2RGBDScene(Dataset):
         rgb_datum = np.transpose(rgb_img, [2, 1, 0])
         rgb_datum = Image.fromarray(rgb_datum)  # otherwise the transform gives error, asking for PIL image
 
-        depth_results_dir = self.params.features_root + self.params.dataset + '/' + Constants.COLORIZED_DEPTH_SAVE + '/'
+        depth_results_dir = self.params.dataset_path + '/' + Constants.COLORIZED_DEPTH_SAVE + '/'
         if os.path.exists(depth_results_dir):  # check whether the depth data has been saved offline
             depth_img_path = depth_results_dir + cat_name + Constants.DELIM + DataTypesNYUV2.Depth + Constants.DELIM + str(ind) + '.hdf5'
             depth_img_file = h5py.File(depth_img_path, 'r')

@@ -114,7 +114,7 @@ class ResNetEncoder:
 
     def reduction_random_weights(self):
         if self.params.reuse_randoms:
-            save_load_dir = self.params.features_root + 'random_weights/'
+            save_load_dir = self.params.models_path + 'random_weights/'
             reduc_weights_file = save_load_dir + "resnet101" + '_reduction_random_weights.pkl'
             if not os.path.exists(save_load_dir):
                 os.makedirs(save_load_dir)
@@ -147,7 +147,7 @@ class ResNetEncoder:
 
     def rnn_random_weights(self):
         if self.params.reuse_randoms:
-            save_load_dir = self.params.features_root + 'random_weights/'
+            save_load_dir = self.params.models_path + 'random_weights/'
             rnn_weights_file = save_load_dir + "resnet101" + '_rnn_random_weights.pkl'
             if not os.path.exists(save_load_dir):
                 os.makedirs(save_load_dir)

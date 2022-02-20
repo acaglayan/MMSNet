@@ -103,7 +103,7 @@ def init_save_dirs(params):
     # if params.debug_mode:
     #     annex += '[debug]'
 
-    params.features_root += annex + '/'
+    params.models_path += annex + '/'
     params.log_dir += annex + '/' + parent_path + '/'
 
     return params
@@ -113,16 +113,16 @@ def get_params():
     parser = argparse.ArgumentParser(formatter_class=argparse.ArgumentDefaultsHelpFormatter)
     parser.add_argument("--dataset", dest="dataset", default="sunrgbd", choices=["sunrgbd", "nyuv2", "fukuoka"],
                         help="SUN RGB-D Scene [sunrgbd], NYU V2 Scene [nyuv2], or Fukuoka RGB-D Indoor Scene [fukuoka]")
-    parser.add_argument("--dataset-path", dest="dataset_path", default="/path/",
-                        # /SunRGBD/  /nyuv2/  /fukuoka/
+    parser.add_argument("--dataset-path", dest="dataset_path", default="/media/gsrt/144AAC7A4AAC59EE/alic_files/datasets/sunrgbd/",
+                        # /media/gsrt/144AAC7A4AAC59EE/alic_files/datasets/sunrgbd/  /media/gsrt/144AAC7A4AAC59EE/alic_files/datasets/nyuv2/  /media/gsrt/144AAC7A4AAC59EE/alic_files/datasets/fukuoka/
                         help="Path to the data root")
-    parser.add_argument("--models-root", dest="features_root", default="models-features",
-                        help="Root folder for models to load/save")
+    parser.add_argument("--models-path", dest="models_path", default="/media/gsrt/144AAC7A4AAC59EE/alic_files/mmsnet",
+                        help="Root folder for CNN features to load/save")
     parser.add_argument("--num-rnn", dest="num_rnn", default=128, type=int, help="Number of RNN")
     parser.add_argument("--reuse-randoms", dest="reuse_randoms", default=1, choices=[0, 1], type=int,
                         help="Handles whether the random weights are gonna save/load or not")
     parser.add_argument("--log-dir", dest="log_dir", default="../logs", help="Log directory")
-    parser.add_argument("--batch-size", dest="batch_size", default=32, type=int)
+    parser.add_argument("--batch-size", dest="batch_size", default=16, type=int)
     params = parser.parse_args()
 
     return params

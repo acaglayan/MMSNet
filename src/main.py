@@ -42,8 +42,8 @@ def eval_mmsnet(params):
 
     sun_num_classes = len(sunrgbd.class_names)
 
-    rgb_backbone_file = params.features_root + 'models/resnet101_' + DataTypesSUNRGBD.RGB + '_best_checkpoint.pth'
-    depth_backbone_file = params.features_root + 'models/resnet101_' + DataTypesSUNRGBD.Depth + '_best_checkpoint.pth'
+    rgb_backbone_file = params.models_path + 'models/resnet101_' + DataTypesSUNRGBD.RGB + '_best_checkpoint.pth'
+    depth_backbone_file = params.models_path + 'models/resnet101_' + DataTypesSUNRGBD.Depth + '_best_checkpoint.pth'
 
     rgb_model_ft = models.resnet101()
     num_ftrs = rgb_model_ft.fc.in_features
@@ -52,7 +52,7 @@ def eval_mmsnet(params):
     depth_model_ft = models.resnet101()
     depth_model_ft.fc = nn.Linear(num_ftrs, sun_num_classes)
 
-    mms_model_file = params.features_root + 'models/' + params.dataset + '_mms_best_checkpoint.pth'
+    mms_model_file = params.models_path + 'models/' + params.dataset + '_mms_best_checkpoint.pth'
     num_classes = get_num_classes(params)
 
     mms_net = MultiModalNet(num_classes)
