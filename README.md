@@ -27,7 +27,7 @@ Finally , source codes might need to be included to the PYTHONPATH (e.g. `export
 ### SUN RGB-D Scene
 <a href="http://rgbd.cs.princeton.edu/" target="_blank">SUN RGB-D Scene</a> dataset is available <a href="http://rgbd.cs.princeton.edu/data/SUNRGBD.zip" target="_blank">here</a>. Keep the file structure as is after extracting the files. In addition, `allsplit.mat` and `SUNRGBDMeta.mat` files need to be downloaded from <a href="http://rgbd.cs.princeton.edu/data/SUNRGBDtoolbox.zip" target="_blank">the SUN RGB-D toolbox</a>. `allsplit.mat` file is under `SUNRGBDtoolbox/traintestSUNRGBD` and  `SUNRGBDMeta.mat` is under `SUNRGBDtoolbox/Metada`. Both files need to be placed under the root folder of SUN RGB-D dataset. E.g. :
 <pre>
-sunrgbd
+SUNRGBD ROOT PATH
 ├── SUNRGBD
 │   ├── kv1 ...
 │   ├── kv2 ...
@@ -39,29 +39,29 @@ sunrgbd
 The dataset is presented in a complex hierarchy. Therefore, it's adopted to the local system using the following commands: 
 
 ```
-python utils/organize_sunrgb_scene.py --dataset-path </SUNRGBD ROOT PATH/> 
+python utils/organize_sunrgb_scene.py --dataset-path <SUNRGBD ROOT PATH>
 ```
-This creates train/eval splits, copies RGB and depth files together with camera calibration parameters files for depth data under the corresponding split structure. Then, depth colorization is applied, which takes a couple of hours.
+This creates train/eval splits, copies RGB and depth files together with camera calibration parameters files for depth data under the corresponding split structure. Then, depth colorization is applied as below, which takes a couple of hours.
 ```
-python utils/depth_colorize.py --dataset "sunrgbd" --dataset-path </SUNRGBD ROOT PATH/>
+python utils/depth_colorize.py --dataset "sunrgbd" --dataset-path <SUNRGBD ROOT PATH>
 ```
 
 ### NYUV2 RGB-D Scene
 <a href="https://cs.nyu.edu/~silberman/datasets/nyu_depth_v2.html" target="_blank">NYUV2 RGB-D Scene</a> dataset is available <a href="http://horatio.cs.nyu.edu/mit/silberman/nyu_depth_v2/nyu_depth_v2_labeled.mat" target="_blank">here</a>. In addition, `splits.mat` file needs to be downloaded from <a href="??" target="_blank">?? toolbox??</a> together with `sceneTypes.txt` from <a href="??" target="_blank">here</a>. The dataset structure should be something like below:
 <pre>
-nyuv2
+NYUV2 ROOT PATH
 ├── nyu_depth_v2_labeled.mat
 ├── splits.mat
 ├── sceneTypes.txt
 </pre>
-Unlike other datasets, the dataset is provided as a Matlab .mat file in `nyu_depth_v2_labeled.mat`. We use the provided in-painted depth maps and RGB images. Depth colorization can be applied as follows in order to prepare depth data offline.
+Unlike other datasets, NYUV2 dataset is provided as a Matlab .mat file in `nyu_depth_v2_labeled.mat`. This work uses the provided in-painted depth maps and RGB images. Depth colorization can be applied as follows in order to prepare depth data offline.
 ```
 python utils/depth_colorize.py --dataset "nyuv2" --dataset-path <NYUV2 ROOT PATH>
 ```
 ### Fukuoka RGB-D Scene
 <a href="http://robotics.ait.kyushu-u.ac.jp/kyushu_datasets/indoor_rgbd.html" target="_blank">Fukuoka RGB-D Indoor Scene</a> dataset is used for the first time in the literature for benchmarking with this work. There are 6 categories: <a href="http://robotics.ait.kyushu-u.ac.jp/~kurazume/data_research/corridors.tar.gz" target="_blank">Corridor</a>, <a href="http://robotics.ait.kyushu-u.ac.jp/~kurazume/data_research/kitchens.tar.gz" target="_blank">kitchen</a>, <a href="http://robotics.ait.kyushu-u.ac.jp/~kurazume/data_research/labs.tar.gz" target="_blank">lab</a>, <a href="http://robotics.ait.kyushu-u.ac.jp/~kurazume/data_research/offices.tar.gz" target="_blank">office</a>, <a href="http://robotics.ait.kyushu-u.ac.jp/~kurazume/data_research/studyrooms.tar.gz" target="_blank">study_room</a>, and <a href="http://robotics.ait.kyushu-u.ac.jp/~kurazume/data_research/toilets.tar.gz" target="_blank">toilet</a>. The files should be extracted in a folder (e.g. `fukuoka`). The dataset structure should be something like below:
 <pre>
-fukuoka
+Fukuoka ROOT PATH
 ├── fukuoka
 │   ├── corridors ...
 │   ├── kitchens ...
@@ -72,17 +72,17 @@ fukuoka
 </pre> 
 The dataset is organized using the following command, which creates `eval-set` under root `fukuoka` folder:
 ```
-python utils/organize_fukuoka_scene.py --dataset-path </Fukuoka ROOT PATH/> 
+python utils/organize_fukuoka_scene.py --dataset-path <Fukuoka ROOT PATH> 
 ```
-Then, depth colorization is applied similar to other dataset usages.
+Then, depth colorization is applied similar to the other dataset usages.
 ```
-python utils/depth_colorize.py --dataset "fukuoka" --dataset-path </Fukuoka ROOT PATH/>
+python utils/depth_colorize.py --dataset "fukuoka" --dataset-path <Fukuoka ROOT PATH>
 ```
 ## Evaluation
 ### Trained Models
 Trained models that give the results in the paper are provided as follows in the tree hierarchy. Download the models to run the evaluation code. Note that we share the used random weights here. However, it's possible to generate new random weights using the param `--reuse-randoms 0` (default 1). The results might change slightly (could be higher or lower). We discuss the effect of randomness in our previous paper <a href="https://authors.elsevier.com/a/1eXMb3qy-3WuW5" target="_blank">here</a>.
 <pre>
-models-features
+<ROOT PATH TO MODELS>
 ├── models
 │   ├── <a href="https://drive.google.com/file/d/1O_Jj9PH2id07SCPFkpRF5UQKr_YAWFCL/view?usp=sharing" target="_blank">resnet101_sun_rgb_best_checkpoint.pth</a>
 │   ├── <a href="https://drive.google.com/file/d/1OjPGjxZW4lUdOucJ2Pix80HaNYtOajv9/view?usp=sharing" target="_blank">resnet101_sun_depth_best_checkpoint.pth</a>
@@ -96,12 +96,12 @@ models-features
 ### Evaluation
 After data preparation and downloading the models, to evaluate to models on SUN RGB-D, NYUV2, and Fukuoka RGB-D, run the following commands:
 ```
-python main.py --dataset "sunrgbd" --dataset-path </SUNRGBD ROOT PATH/> --models-root <ROOT PATH TO MODELS>
-python main.py --dataset "nyuv2" --dataset-path <NYUV2 ROOT PATH> --models-root <ROOT PATH TO MODELS>
-python main.py --dataset "fukuoka" --dataset-path </Fukuoka ROOT PATH/> --models-root <ROOT PATH TO MODELS>
+python main.py --dataset "sunrgbd" --dataset-path <SUNRGBD ROOT PATH> --models-path <ROOT PATH TO MODELS>
+python main.py --dataset "nyuv2" --dataset-path <NYUV2 ROOT PATH> --models-path <ROOT PATH TO MODELS>
+python main.py --dataset "fukuoka" --dataset-path <Fukuoka ROOT PATH> --models-path <ROOT PATH TO MODELS>
 ```
 ## Results
-Multi-modal performance comparison of this work (MMSNet) with the related methods on SUN RGB-D, NYUV2 RGB-D, and Fukuoka RGB-D Scene datasets in terms of accuracy (%).
+Multi-modal performance comparison of this work (MMSNet) with the related methods on SUN RGB-D, NYUV2 RGB-D, and Fukuoka RGB-D Scene datasets in terms of accuracy (%). We also share our `LaTeX` comparison tables together with the `bibtext` file for SUN RGB-D and NYUV2 benchmarking (see ??). Feel free to use them.
 Method | Paper | SUN RGB-D |  NYUV2 RGB-D | Fukuoka RGB-D |
 :-------:|:-------:|:-------:|:-------:|:-------:|
 Places CNN-RBF SVM | <a href="https://papers.nips.cc/paper/2014/hash/3fe94a002317b5f9259f82690aeea4cd-Abstract.html" target="_blank">NeurIPS’14</a> | 39.0 | - | -
