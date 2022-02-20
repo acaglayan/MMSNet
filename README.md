@@ -82,7 +82,7 @@ python utils/depth_colorize.py --dataset "fukuoka" --dataset-path <Fukuoka ROOT 
 ### Trained Models
 Trained models that give the results in the paper are provided as follows in the tree hierarchy. Download the models to run the evaluation code. Note that we share the used random weights here. However, it's possible to generate new random weights using the param `--reuse-randoms 0` (default 1). The results might change slightly (could be higher or lower). We discuss the effect of randomness in our previous paper <a href="https://authors.elsevier.com/a/1eXMb3qy-3WuW5" target="_blank">here</a>.
 <pre>
-<ROOT PATH TO MODELS>
+ROOT PATH TO MODELS
 ├── models
 │   ├── <a href="https://drive.google.com/file/d/1O_Jj9PH2id07SCPFkpRF5UQKr_YAWFCL/view?usp=sharing" target="_blank">resnet101_sun_rgb_best_checkpoint.pth</a>
 │   ├── <a href="https://drive.google.com/file/d/1OjPGjxZW4lUdOucJ2Pix80HaNYtOajv9/view?usp=sharing" target="_blank">resnet101_sun_depth_best_checkpoint.pth</a>
