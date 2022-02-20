@@ -101,7 +101,7 @@ python main.py --dataset "nyuv2" --dataset-path <NYUV2 ROOT PATH> --models-path 
 python main.py --dataset "fukuoka" --dataset-path <Fukuoka ROOT PATH> --models-path <ROOT PATH TO MODELS>
 ```
 ## Results
-Multi-modal performance comparison of this work (MMSNet) with the related methods on SUN RGB-D, NYUV2 RGB-D, and Fukuoka RGB-D Scene datasets in terms of accuracy (%). We also share our `LaTeX` comparison tables together with the `bibtext` file for SUN RGB-D and NYUV2 benchmarking (see ??). Feel free to use them.
+Multi-modal performance comparison of this work (MMSNet) with the related methods on SUN RGB-D, NYUV2 RGB-D, and Fukuoka RGB-D Scene datasets in terms of accuracy (%).
 Method | Paper | SUN RGB-D |  NYUV2 RGB-D | Fukuoka RGB-D |
 :-------:|:-------:|:-------:|:-------:|:-------:|
 Places CNN-RBF SVM | <a href="https://papers.nips.cc/paper/2014/hash/3fe94a002317b5f9259f82690aeea4cd-Abstract.html" target="_blank">NeurIPS’14</a> | 39.0 | - | -
@@ -129,6 +129,7 @@ TRecgNet Aug | <a href="https://link.springer.com/article/10.1007/s11263-021-014
 CNN-randRNN | <a href="https://authors.elsevier.com/a/1eXMb3qy-3WuW5" target="_blank">CVIU’22</a> | 60.7 | 69.1 | 78.3
 <b> MMSNet </b> | <b>This work</b> | <b>62.0</b> | <b>72.2</b> | <b>81.7</b>
 
+We also share our `LaTeX` comparison tables together with the `bibtext` file for SUN RGB-D and NYUV2 benchmarking (see ??). Feel free to use them.
 ## Citation
 If you find this work useful in your research, please cite the following papers:
 ```
