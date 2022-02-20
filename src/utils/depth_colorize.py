@@ -76,7 +76,7 @@ def colorize_sunrgbd(params, results_dir):
 
 def colorize_depth_sets(params):
 
-    results_dir = params.features_root + '/' + params.dataset + '/' + Constants.COLORIZED_DEPTH_SAVE + '/'
+    results_dir = params.dataset_path + '/' + Constants.COLORIZED_DEPTH_SAVE + '/'
     if not os.path.exists(results_dir):
         os.makedirs(results_dir)
 
