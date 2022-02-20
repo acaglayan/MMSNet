@@ -47,7 +47,7 @@ python utils/depth_colorize.py --dataset "sunrgbd" --dataset-path <SUNRGBD ROOT 
 ```
 
 ### NYUV2 RGB-D Scene
-<a href="https://cs.nyu.edu/~silberman/datasets/nyu_depth_v2.html" target="_blank">NYUV2 RGB-D Scene</a> dataset is available <a href="http://horatio.cs.nyu.edu/mit/silberman/nyu_depth_v2/nyu_depth_v2_labeled.mat" target="_blank">here</a>. In addition, `splits.mat` file needs to be downloaded from <a href="??" target="_blank">?? toolbox??</a> together with `sceneTypes.txt` from <a href="??" target="_blank">here</a>. The dataset structure should be something like below:
+<a href="https://cs.nyu.edu/~silberman/datasets/nyu_depth_v2.html" target="_blank">NYUV2 RGB-D Scene</a> dataset is available <a href="http://horatio.cs.nyu.edu/mit/silberman/nyu_depth_v2/nyu_depth_v2_labeled.mat" target="_blank">here</a>. In addition, `splits.mat` file needs to be downloaded from <a href="??" target="_blank">?? toolbox??</a> together with `sceneTypes.txt` from <a href="https://github.com/acaglayan/MMSNet/blob/main/data/sceneTypes.txt" target="_blank">here</a>. The dataset structure should be something like below:
 <pre>
 NYUV2 ROOT PATH
 ├── nyu_depth_v2_labeled.mat
@@ -129,7 +129,7 @@ TRecgNet Aug | <a href="https://link.springer.com/article/10.1007/s11263-021-014
 CNN-randRNN | <a href="https://authors.elsevier.com/a/1eXMb3qy-3WuW5" target="_blank">CVIU’22</a> | 60.7 | 69.1 | 78.3
 <b> MMSNet </b> | <b>This work</b> | <b>62.0</b> | <b>72.2</b> | <b>81.7</b>
 
-We also share our `LaTeX` comparison tables together with the `bibtext` file for SUN RGB-D and NYUV2 benchmarking (see ??). Feel free to use them.
+We also share our `LaTeX` comparison tables together with the `bibtext` file for SUN RGB-D and NYUV2 benchmarking (see `LaTeX` <a href="https://github.com/acaglayan/MMSNet/tree/main/latex">directory</a>). Feel free to use them.
 ## Citation
 If you find this work useful in your research, please cite the following papers:
 ```
