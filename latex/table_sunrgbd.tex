@@ -1,0 +1,39 @@
+\begin{table}[!t]
+	\caption{Performance comparison of our approach with the related methods on SUN RGB-D Scene dataset in terms of accuracy (\%). \textcolor{red}{Red:} Best result, \textcolor{blue}{Blue:} Second best result, \textcolor{green}{Green:} Third best result.}
+	\begin{center}
+		\setlength{\tabcolsep}{0.9em} % for the horizontal padding
+		\def\arraystretch{1.2}
+		\begin{adjustbox}{width=\columnwidth}
+			\begin{tabular}{ llccc }
+				\hline
+				Method 												&					& RGB 				& Depth 			& RGB-D \\ \hline \hline
+				Places CNN-RBF SVM \citep{2014_NIPS_Zhou}    		& NeurIPS'14 		& 38.1 				& 27.7 	 			& 39.0 		\\
+				SS-CNN-R6 \citep{2016_ICRA_Liao}    				& ICRA'16			& 36.1 				& - 	 			& 41.3 		\\ 
+				DMFF \citep{2016_CVPR_Zhu}    						& CVPR'16			& 37.0  			& - 				& 41.5 		\\ 
+				Places CNN-RCNN \citep{2016_CVPR_Wang}         		& CVPR'16			& 40.4 	           	& 36.3 	        	& 48.1 		\\ 
+				MSMM \citep{2017_IJCAI_Song}         				& IJCAI'17			& 41.5 	           	& 40.1 	        	& 52.3 		\\ 
+				RGB-D-CNN \citep{2017_AAAI_Song}         			& AAAI'17			& 42.7 	           	& 42.4 	        	& 52.4 		\\ 
+				D-BCNN \citep{2017_RAS_Zaki}         				& RAS'17			& - 	           	& - 	        	& 55.5 		\\ 
+				MDSI-CNN \citep{2018_TPAMI_Asif}         			& TPAMI'18			& 39.6 	           	& 35.2 	        	& 45.2 		\\ 
+				DF\textsuperscript{2}Net \citep{2018_AAAI_Li} 		& AAAI'18			& - 	           	& - 	        	& 54.6 		\\ 
+				HP-CNN-T \citep{2019_AuotRob_Zaki}         			& Auton.'19			& 38.8 	           	& 28.5 	        	& 42.2 		\\ 
+				LM-CNN \citep{2019_CogComp_Cai}         			& Cogn. Comput.'19	& 44.3 	           	& 34.6 	        	& 48.7 		\\ 
+				RGB-D-OB \citep{2019_TIP_Song}         				& TIP'19			& - 	           	& 42.4 	        	& 53.8 		\\ 
+				Cross-Modal Graph \citep{2019_AAAI_Yuan}        	& AAAI'19			& 45.7 	           	& - 	        	& 55.1		\\
+				RAGC \citep{2019_ICCVW_Montoro} 					& ICCVW'19			& - 	           	& - 	        	& 42.1 		\\ 
+				MAPNet \citep{2019_PR_Li} 							& PR'19				& - 	           	& - 	        	& 56.2 		\\ 
+				TRecgNet Aug \citep{2019_CVPR_Du}         			& CVPR'19			& 50.6 				& 47.9 				& 56.7 		\\
+				G-L-SOOR \citep{2020_TIP_Song}         				& TIP'20			& 50.5 	           	& 44.1 	        	& 55.5		\\
+				MSN \citep{2020_Neuroc_Xiong}         				& Neurocomp.'20		& - 	           	& - 	        	& 56.2		\\
+				CBCL \citep{2020_BMVC_Ayub}         				& BMVC'20			& 48.8 				& 37.3 	        	& 59.5 		\\ 
+				ASK \citep{2021_TIP_Xiong}  						& TIP'21			& - 				& -	        		& 57.3 		\\
+				2D-3D FusionNet \citep{2021_IF_Montoro}  			& Inf. Fusion'21	& \bftab\textcolor{green}{56.4} 		& 44.1	        	& 58.6 		\\
+				TRecgNet Aug \citep{2021_IJCV_Du}  					& IJCV'21			& 54.2 				& \bftab\textcolor{green}{49.3} 	        	& \bftab\textcolor{green}{59.8} 		\\
+				CNN-randRNN \citep{2022_CVIU_Caglayan}   			& CVIU'22			& \bftab\textcolor{blue}{58.5} 				& \bftab\textcolor{blue}{50.1} 				& \bftab\textcolor{blue}{60.7} 		\\ \hline
+				\textbf{MMSNet}  									& \textbf{This work	}		& \bftab\textcolor{red}{58.6}		& \bftab\textcolor{red}{50.4}  	& \bftab\textcolor{red}{62.0} 	\\ %\hline
+				\hline
+			\end{tabular}
+		\end{adjustbox}
+		\label{table:sunrgbdResults}
+	\end{center}
+\end{table}
