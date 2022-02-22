@@ -25,10 +25,10 @@ pip install seaborn
 Also, source code path might need to be included to the PYTHONPATH (e.g. `export PYTHONPATH=$PYTHONPATH:/path_to_project/MMSNet/src/utils`).
 ## Data Preparation
 ### SUN RGB-D Scene
-<a href="http://rgbd.cs.princeton.edu/" target="_blank">SUN RGB-D Scene</a> dataset is available <a href="http://rgbd.cs.princeton.edu/data/SUNRGBD.zip" target="_blank">here</a>. Keep the file structure as is after extracting the files. In addition, `allsplit.mat` and `SUNRGBDMeta.mat` files need to be downloaded from <a href="http://rgbd.cs.princeton.edu/data/SUNRGBDtoolbox.zip" target="_blank">the SUN RGB-D toolbox</a>. `allsplit.mat` file is under `SUNRGBDtoolbox/traintestSUNRGBD` and  `SUNRGBDMeta.mat` is under `SUNRGBDtoolbox/Metada`. Both files should be placed under the root folder of SUN RGB-D dataset. E.g. :
+<a href="http://rgbd.cs.princeton.edu/" target="_blank">SUN RGB-D Scene</a> dataset is the largest real-world RGB-D indoor dataset as of today. Download the dataset from <a href="http://rgbd.cs.princeton.edu/data/SUNRGBD.zip" target="_blank">here</a>, keep the file structure as is after extracting the files. In addition, `allsplit.mat` and `SUNRGBDMeta.mat` files need to be downloaded from <a href="http://rgbd.cs.princeton.edu/data/SUNRGBDtoolbox.zip" target="_blank">the SUN RGB-D toolbox</a>. `allsplit.mat` file is under `SUNRGBDtoolbox/traintestSUNRGBD` and  `SUNRGBDMeta.mat` is under `SUNRGBDtoolbox/Metada`. Both files should be placed under the root folder of SUN RGB-D dataset. E.g. :
 <pre>
 SUNRGBD ROOT PATH
-├── SUNRGBD
+├── <a href="http://rgbd.cs.princeton.edu/data/SUNRGBD.zip" target="_blank">SUNRGBD</a>
 │   ├── kv1 ...
 │   ├── kv2 ...
 │   ├── realsense ...
@@ -50,27 +50,27 @@ python utils/depth_colorize.py --dataset "sunrgbd" --dataset-path <SUNRGBD ROOT 
 <a href="https://cs.nyu.edu/~silberman/datasets/nyu_depth_v2.html" target="_blank">NYUV2 RGB-D Scene</a> dataset is available <a href="http://horatio.cs.nyu.edu/mit/silberman/nyu_depth_v2/nyu_depth_v2_labeled.mat" target="_blank">here</a>. In addition, `splits.mat` file needs to be downloaded from <a href="http://horatio.cs.nyu.edu/mit/silberman/indoor_seg_sup/splits.mat" target="_blank">here</a> together with `sceneTypes.txt` from <a href="https://github.com/acaglayan/MMSNet/blob/main/data/sceneTypes.txt" target="_blank">here</a>. The dataset structure should be something like below:
 <pre>
 NYUV2 ROOT PATH
-├── nyu_depth_v2_labeled.mat
-├── splits.mat
-├── sceneTypes.txt
+├── <a href="http://horatio.cs.nyu.edu/mit/silberman/nyu_depth_v2/nyu_depth_v2_labeled.mat" target="_blank">nyu_depth_v2_labeled.mat</a>
+├── <a href="http://horatio.cs.nyu.edu/mit/silberman/indoor_seg_sup/splits.mat" target="_blank">splits.mat</a>
+├── <a href="https://github.com/acaglayan/MMSNet/blob/main/data/sceneTypes.txt" target="_blank">sceneTypes.txt</a>
 </pre>
 Unlike other datasets, NYUV2 dataset is provided as a Matlab .mat file in `nyu_depth_v2_labeled.mat`. This work uses the provided in-painted depth maps and RGB images. In order to prepare depth data offline, depth colorization can be applied as follows:
 ```
 python utils/depth_colorize.py --dataset "nyuv2" --dataset-path <NYUV2 ROOT PATH>
 ```
 ### Fukuoka RGB-D Scene
-<a href="http://robotics.ait.kyushu-u.ac.jp/kyushu_datasets/indoor_rgbd.html" target="_blank">Fukuoka RGB-D Indoor Scene</a> dataset is used for the first time in the literature for benchmarking in this work. There are 6 categories: <a href="http://robotics.ait.kyushu-u.ac.jp/~kurazume/data_research/corridors.tar.gz" target="_blank">Corridor</a>, <a href="http://robotics.ait.kyushu-u.ac.jp/~kurazume/data_research/kitchens.tar.gz" target="_blank">kitchen</a>, <a href="http://robotics.ait.kyushu-u.ac.jp/~kurazume/data_research/labs.tar.gz" target="_blank">lab</a>, <a href="http://robotics.ait.kyushu-u.ac.jp/~kurazume/data_research/offices.tar.gz" target="_blank">office</a>, <a href="http://robotics.ait.kyushu-u.ac.jp/~kurazume/data_research/studyrooms.tar.gz" target="_blank">study_room</a>, and <a href="http://robotics.ait.kyushu-u.ac.jp/~kurazume/data_research/toilets.tar.gz" target="_blank">toilet</a>. The files should be extracted in a folder (e.g. `fukuoka`). The dataset structure should be something like below:
+<a href="http://robotics.ait.kyushu-u.ac.jp/kyushu_datasets/indoor_rgbd.html" target="_blank">Fukuoka RGB-D Indoor Scene</a> dataset is used for the first time in the literature for benchmarking in this work. There are 6 categories: corridor, kitchen, lab, office, study room, and toilet (see the download links below). The files should be extracted in a parent folder (e.g. `fukuoka`). The dataset structure should be something like below:
 <pre>
 Fukuoka ROOT PATH
 ├── fukuoka
-│   ├── corridors ...
-│   ├── kitchens ...
-│   ├── labs ...
-│   ├── offices ...
-│   ├── studyrooms ...
-│   ├── toilets ...
+│   ├── <a href="http://robotics.ait.kyushu-u.ac.jp/~kurazume/data_research/corridors.tar.gz" target="_blank">corridors</a> ...
+│   ├── <a href="http://robotics.ait.kyushu-u.ac.jp/~kurazume/data_research/kitchens.tar.gz" target="_blank">kitchens</a> ...
+│   ├── <a href="http://robotics.ait.kyushu-u.ac.jp/~kurazume/data_research/labs.tar.gz" target="_blank">labs</a> ...
+│   ├── <a href="http://robotics.ait.kyushu-u.ac.jp/~kurazume/data_research/offices.tar.gz" target="_blank">offices</a> ...
+│   ├── <a href="http://robotics.ait.kyushu-u.ac.jp/~kurazume/data_research/studyrooms.tar.gz" target="_blank">studyrooms</a> ...
+│   ├── <a href="http://robotics.ait.kyushu-u.ac.jp/~kurazume/data_research/toilets.tar.gz" target="_blank">toilets</a> ...
 </pre> 
-The dataset is organized using the following command, which creates `eval-set` under the root `fukuoka` path:
+The dataset is organized using the following command, which creates `eval-set` under the root path:
 ```
 python utils/organize_fukuoka_scene.py --dataset-path <Fukuoka ROOT PATH> 
 ```
