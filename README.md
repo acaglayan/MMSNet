@@ -36,7 +36,7 @@ SUNRGBD ROOT PATH
 ├── allsplit.mat
 ├── SUNRGBDMeta.mat
 </pre>
-The dataset is presented in a complex hierarchy. Therefore, it's adopted to the local system using the following commands: 
+The dataset is presented in a complex hierarchy. Therefore, it's adopted to the local system as follows: 
 
 ```
 python utils/organize_sunrgb_scene.py --dataset-path <SUNRGBD ROOT PATH>
