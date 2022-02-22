@@ -103,7 +103,7 @@ python eval_models.py --dataset "fukuoka" --dataset-path <Fukuoka ROOT PATH> --m
 ## Results
 Multi-modal performance comparison of this work (MMSNet) with the related methods on SUN RGB-D, NYUV2 RGB-D, and Fukuoka RGB-D Scene datasets in terms of accuracy (%).
 Method | Paper | SUN RGB-D |  NYUV2 RGB-D | Fukuoka RGB-D |
-:-------:|:-------:|:-------:|:-------:|:-------:|
+:--------|:--------|:-------:|:-------:|:-------:|
 Places CNN-RBF SVM | <a href="https://papers.nips.cc/paper/2014/hash/3fe94a002317b5f9259f82690aeea4cd-Abstract.html" target="_blank">NeurIPS’14</a> | 39.0 | - | -
 SS-CNN-R6 | <a href="https://ieeexplore.ieee.org/abstract/document/7487381" target="_blank">ICRA’16</a> | 41.3 | - | -
 DMFF | <a href="https://openaccess.thecvf.com/content_cvpr_2016/html/Zhu_Discriminative_Multi-Modal_Feature_CVPR_2016_paper.html" target="_blank">CVPR’16</a> | 41.5 | - | -
