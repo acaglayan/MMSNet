@@ -80,7 +80,7 @@ python utils/depth_colorize.py --dataset "fukuoka" --dataset-path <Fukuoka ROOT 
 ```
 ## Evaluation
 ### Trained Models
-Trained models that give the results in the paper are provided as follows in a tree hierarchy. Download the models to run the evaluation code. Note that we share the used random weights here. However, it's possible to generate new random weights using the param `--reuse-randoms 0` (default 1). The results might change slightly (could be higher or lower). We discuss the effect of randomness in our previous paper <a href="https://authors.elsevier.com/a/1eXMb3qy-3WuW5" target="_blank">here</a>.
+Trained models that give the results in the paper are provided as follows in a tree hierarchy. Download the models to run the evaluation code. Note that we share the used random weights here. However, it's possible to generate new random weights using the param `--reuse-randoms 0` (default 1). The results might change slightly (could be higher or lower). We discuss the effect of randomness in our previous paper <a href="https://authors.elsevier.com/a/1eXMb3qy-3WuW5" target="_blank">here</a>. Note that this (random modeling) should be done during training process, not only for evaluation (as the new random set naturally creates a new distribution).
 <pre>
 ROOT PATH TO MODELS
 ├── models
