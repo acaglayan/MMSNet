@@ -3,7 +3,7 @@ This repository provides the implementation of the following paper:<br/>
 <br/>
 **MMSNet: Multi-Modal scene recognition using multi-scale encoded features**<br/>
 <a href="https://github.com/acaglayan" target="_blank">Ali Caglayan *</a>, <a href="https://scholar.google.com/citations?hl=en&user=VJgx61MAAAAJ&view_op=list_works&sortby=pubdate" target="_blank">Nevrez Imamoglu *</a>, <a href="https://www.airc.aist.go.jp/en/gsrt/" target="_blank">Ryosuke Nakamura</a>  
-[<a href="https://deliverypdf.ssrn.com/delivery.php?ID=580124069074127013026064019068093126084045031036095011024026100020003031060111038068121028114008004079028048042114056099030016111091093127049009044098084099064020122077092082092084037000111047054002044068049036094021097003112067071099018126099087064127006125020080111069087099107098113025103&EXT=pdf&INDEX=TRUE" target="_blank">Paper</a>]
+[<a href="https://www.sciencedirect.com/science/article/pii/S0262885622000828" target="_blank">Paper</a>]
 
 
 <br/>
@@ -20,7 +20,6 @@ pip install -U scikit-learn
 pip install opencv-python
 pip install psutil
 pip install h5py
-pip install seaborn
 ```
 Also, source code path might need to be included to the PYTHONPATH (e.g. `export PYTHONPATH=$PYTHONPATH:/path_to_project/MMSNet/src/utils`).
 ## Data Preparation
@@ -101,7 +100,7 @@ python eval_models.py --dataset "nyuv2" --dataset-path <NYUV2 ROOT PATH> --model
 python eval_models.py --dataset "fukuoka" --dataset-path <Fukuoka ROOT PATH> --models-path <ROOT PATH TO MODELS>
 ```
 ## Results
-Multi-modal performance comparison of this work (MMSNet) with the related methods on SUN RGB-D, NYUV2 RGB-D, and Fukuoka RGB-D Scene datasets in terms of accuracy (%).
+Multi-modal performance comparison of this work (MMSNet) with the related methods on SUN RGB-D, NYUV2 RGB-D, and Fukuoka RGB-D Scene datasets in terms of accuracy (%). * indicates additional use of large-scale data with multi-task training.
 Method | Paper | SUN RGB-D |  NYUV2 RGB-D | Fukuoka RGB-D |
 :--------|:--------|:-------:|:-------:|:-------:|
 Places CNN-RBF SVM | <a href="https://papers.nips.cc/paper/2014/hash/3fe94a002317b5f9259f82690aeea4cd-Abstract.html" target="_blank">NeurIPS’14</a> | 39.0 | - | -
@@ -128,6 +127,7 @@ ASK | <a href="https://ieeexplore.ieee.org/abstract/document/9337174" target="_b
 TRecgNet Aug | <a href="https://link.springer.com/article/10.1007/s11263-021-01475-7" target="_blank">IJCV’21</a> | 59.8 | 71.8 | - 
 CNN-randRNN | <a href="https://authors.elsevier.com/a/1eXMb3qy-3WuW5" target="_blank">CVIU’22</a> | 60.7 | 69.1 | 78.3
 <b> MMSNet </b> | <b>This work</b> | <b>62.0</b> | <b>72.2</b> | <b>81.7</b>
+<b> Omnivore * </b> | <b><a href="https://arxiv.org/pdf/2201.08377.pdf" target="_blank">CVPR’22</a></b> | <b>67.1</b> | <b>79.8</b> | -
 
 We also share our `LaTeX` comparison tables together with the `bibtext` file for SUN RGB-D and NYUV2 benchmarking (see `LaTeX` <a href="https://github.com/acaglayan/MMSNet/tree/main/latex">directory</a>). Feel free to use them.
 ## Citation
@@ -135,9 +135,11 @@ If you find this work useful in your research, please cite the following papers:
 ```
 @article{Caglayan2022MMSNet,
     title={MMSNet: Multi-Modal Scene Recognition Using Multi-Scale Encoded Features},
-    journal = {SSRN},
+    journal = {Image and Vision Computing},
+    volume = {122},
+    pages = {104453},
     author={Ali Caglayan and Nevrez Imamoglu and Ryosuke Nakamura},
-    doi = {http://dx.doi.org/10.2139/ssrn.4032570 },
+    doi = {https://doi.org/10.1016/j.imavis.2022.104453},
     year={2022}
 }
 
