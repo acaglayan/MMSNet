@@ -3,7 +3,7 @@ This repository provides the implementation of the following paper:<br/>
 <br/>
 **MMSNet: Multi-Modal scene recognition using multi-scale encoded features**<br/>
 <a href="https://github.com/acaglayan" target="_blank">Ali Caglayan *</a>, <a href="https://scholar.google.com/citations?hl=en&user=VJgx61MAAAAJ&view_op=list_works&sortby=pubdate" target="_blank">Nevrez Imamoglu *</a>, <a href="https://www.airc.aist.go.jp/en/gsrt/" target="_blank">Ryosuke Nakamura</a>  
-[<a href="https://www.sciencedirect.com/science/article/pii/S0262885622000828" target="_blank">Paper</a>]
+[<a href="https://authors.elsevier.com/a/1e%7EbFxnVK7Qoy" target="_blank">Paper</a>]
 
 
 <br/>
