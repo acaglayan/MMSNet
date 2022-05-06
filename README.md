@@ -125,9 +125,9 @@ CBCL | <a href="https://www.bmvc2020-conference.com/conference/papers/paper_0063
 ASK | <a href="https://ieeexplore.ieee.org/abstract/document/9337174" target="_blank">TIP’21</a> | 57.3 | 69.3 | -
 2D-3D FusionNet | <a href="https://www.sciencedirect.com/science/article/pii/S1566253521001032" target="_blank">Inf. Fusion’21</a> | 58.6 | <b>75.1</b> | -
 TRecgNet Aug | <a href="https://link.springer.com/article/10.1007/s11263-021-01475-7" target="_blank">IJCV’21</a> | 59.8 | 71.8 | - 
-CNN-randRNN | <a href="https://authors.elsevier.com/a/1eXMb3qy-3WuW5" target="_blank">CVIU’22</a> | 60.7 | 69.1 | 78.3
-<b> MMSNet </b> | <b>This work</b> | <b>62.0</b> | <b>72.2</b> | <b>81.7</b>
-<b> Omnivore * </b> | <b><a href="https://arxiv.org/pdf/2201.08377.pdf" target="_blank">CVPR’22</a></b> | <b>67.1</b> | <b>79.8</b> | -
+CNN-randRNN | <a href="https://www.sciencedirect.com/science/article/pii/S1077314222000133" target="_blank">CVIU’22</a> | 60.7 | 69.1 | 78.3
+<b> MMSNet </b> | <b><a href="https://authors.elsevier.com/a/1e%7EbFxnVK7Qoy" target="_blank">This work</a></b> | <b>62.0</b> | <b>72.2</b> | <b>81.7</b>
+<b> Omnivore * </b> | <a href="https://arxiv.org/pdf/2201.08377.pdf" target="_blank">CVPR’22</a> | <b>67.1</b> | <b>79.8</b> | -
 
 We also share our `LaTeX` comparison tables together with the `bibtext` file for SUN RGB-D and NYUV2 benchmarking (see `LaTeX` <a href="https://github.com/acaglayan/MMSNet/tree/main/latex">directory</a>). Feel free to use them.
 ## Citation
