@@ -1,5 +1,5 @@
 \begin{table}[!h]
-	\caption{Accuracy comparison of our approach with the state-of-the-art methods on the NYU V2 RGB-D Scene dataset (\%). \textcolor{red}{Red:} Best result, \textcolor{blue}{Blue:} Second best result, \textcolor{green}{Green:} Third best result.}
+	\caption{Accuracy comparison of our approach with the state-of-the-art methods on the NYU V2 RGB-D Scene dataset (\%). \textcolor{red}{Red:} Best result, \textcolor{blue}{Blue:} Second best result, \textcolor{green}{Green:} Third best result. $\dagger$ indicates additional use of large-scale data with multi-task training.}
 	\begin{center}
 		\setlength{\tabcolsep}{0.9em} % for the horizontal padding
 		\def\arraystretch{1.2}
@@ -23,8 +23,9 @@
 				ASK \citep{2021_TIP_Xiong}  						& TIP'21		& - 				& -	        		& 69.3 	\\
 				2D-3D FusionNet \citep{2021_IF_Montoro}  			& Inf. Fusion'21& \bftab\textcolor{green}{67.8} 				& \bftab\textcolor{green}{59.2}	        	& \bftab\textcolor{red}{75.1} 	\\
 				TRecgNet Aug \citep{2021_IJCV_Du}  					& IJCV'21		& 66.1 				& \bftab\textcolor{red}{64.1}	        	& \bftab\textcolor{green}{71.8} 	\\
-				CNN-randRNN \citep{2022_CVIU_Caglayan}         		& CVIU'22		& \bftab\textcolor{blue}{69.1} 				& 48.3 	        	& 69.1 	\\ \hline
-				\textbf{MMSNet}  									& \textbf{This work}		& \bftab\textcolor{red}{71.4}		& \textbf{43.1}  	& \bftab\textcolor{blue}{72.2} \\ %\hline
+				CNN-randRNN \citep{2022_CVIU_Caglayan}         		& CVIU'22		& \bftab\textcolor{blue}{69.1} 				& 48.3 	        	& 69.1 	\\ 
+				\textbf{MMSNet}  									& \textbf{This work}		& \bftab\textcolor{red}{71.4}		& \textbf{43.1}  	& \bftab\textcolor{blue}{72.2} \\ \hline
+				Omnivore \citep{2022_CVPR_Girdhar} $^\dagger$		& CVPR'22			& - 				&- 				& \bftab\textcolor{red}{79.8} 		\\
 				\hline
 			\end{tabular}
 		\end{adjustbox}

@@ -1,5 +1,5 @@
 \begin{table}[!t]
-	\caption{Performance comparison of our approach with the related methods on SUN RGB-D Scene dataset in terms of accuracy (\%). \textcolor{red}{Red:} Best result, \textcolor{blue}{Blue:} Second best result, \textcolor{green}{Green:} Third best result.}
+	\caption{Performance comparison of our approach with the related methods on SUN RGB-D Scene dataset in terms of accuracy (\%). \textcolor{red}{Red:} Best result, \textcolor{blue}{Blue:} Second best result, \textcolor{green}{Green:} Third best result. $\dagger$ indicates additional use of large-scale data with multi-task training.}
 	\begin{center}
 		\setlength{\tabcolsep}{0.9em} % for the horizontal padding
 		\def\arraystretch{1.2}
@@ -27,10 +27,11 @@
 				MSN \citep{2020_Neuroc_Xiong}         				& Neurocomp.'20		& - 	           	& - 	        	& 56.2		\\
 				CBCL \citep{2020_BMVC_Ayub}         				& BMVC'20			& 48.8 				& 37.3 	        	& 59.5 		\\ 
 				ASK \citep{2021_TIP_Xiong}  						& TIP'21			& - 				& -	        		& 57.3 		\\
-				2D-3D FusionNet \citep{2021_IF_Montoro}  			& Inf. Fusion'21	& \bftab\textcolor{green}{56.4} 		& 44.1	        	& 58.6 		\\
+				2D-3D FusionNet \citep{2021_IF_Montoro}  			& Inf. Fusion'21	& \bftab\textcolor{green}{56.4} 				& 44.1	        	& 58.6 		\\
 				TRecgNet Aug \citep{2021_IJCV_Du}  					& IJCV'21			& 54.2 				& \bftab\textcolor{green}{49.3} 	        	& \bftab\textcolor{green}{59.8} 		\\
-				CNN-randRNN \citep{2022_CVIU_Caglayan}   			& CVIU'22			& \bftab\textcolor{blue}{58.5} 				& \bftab\textcolor{blue}{50.1} 				& \bftab\textcolor{blue}{60.7} 		\\ \hline
-				\textbf{MMSNet}  									& \textbf{This work	}		& \bftab\textcolor{red}{58.6}		& \bftab\textcolor{red}{50.4}  	& \bftab\textcolor{red}{62.0} 	\\ %\hline
+				CNN-randRNN \citep{2022_CVIU_Caglayan}   			& CVIU'22			& \bftab\textcolor{blue}{58.5} 				& \bftab\textcolor{blue}{50.1} 				& \bftab\textcolor{blue}{60.7} 		\\ 
+				\textbf{MMSNet}  									& \textbf{This work	}		& \bftab\textcolor{red}{58.6}		& \bftab\textcolor{red}{50.4}  	& \bftab\textcolor{red}{62.0} 	\\ \hline
+				Omnivore \citep{2022_CVPR_Girdhar} $^\dagger$		& CVPR'22			& - 				&- 				& \bftab\textcolor{red}{67.1} 		\\
 				\hline
 			\end{tabular}
 		\end{adjustbox}
