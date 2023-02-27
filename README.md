@@ -3,7 +3,7 @@ This repository provides the implementation of the following paper:<br/>
 <br/>
 **MMSNet: Multi-Modal scene recognition using multi-scale encoded features**<br/>
 <a href="https://github.com/acaglayan" target="_blank">Ali Caglayan *</a>, <a href="https://scholar.google.com/citations?hl=en&user=VJgx61MAAAAJ&view_op=list_works&sortby=pubdate" target="_blank">Nevrez Imamoglu *</a>, <a href="https://www.airc.aist.go.jp/en/gsrt/" target="_blank">Ryosuke Nakamura</a>  
-[<a href="https://authors.elsevier.com/a/1e%7EbFxnVK7Qoy" target="_blank">Paper</a>]
+[<a href="https://www.sciencedirect.com/science/article/pii/S0262885622000828" target="_blank">Paper</a>]
 
 
 <br/>
@@ -126,8 +126,8 @@ ASK | <a href="https://ieeexplore.ieee.org/abstract/document/9337174" target="_b
 2D-3D FusionNet | <a href="https://www.sciencedirect.com/science/article/pii/S1566253521001032" target="_blank">Inf. Fusion’21</a> | 58.6 | <b>75.1</b> | -
 TRecgNet Aug | <a href="https://link.springer.com/article/10.1007/s11263-021-01475-7" target="_blank">IJCV’21</a> | 59.8 | 71.8 | - 
 CNN-randRNN | <a href="https://www.sciencedirect.com/science/article/pii/S1077314222000133" target="_blank">CVIU’22</a> | 60.7 | 69.1 | 78.3
-<b> MMSNet </b> | <b><a href="https://authors.elsevier.com/a/1e%7EbFxnVK7Qoy" target="_blank">This work</a></b> | <b>62.0</b> | <b>72.2</b> | <b>81.7</b>
-<b> Omnivore * </b> | <a href="https://arxiv.org/pdf/2201.08377.pdf" target="_blank">CVPR’22</a> | <b>67.1</b> | <b>79.8</b> | -
+<b> MMSNet </b> | <b><a href="https://www.sciencedirect.com/science/article/pii/S0262885622000828" target="_blank">This work</a></b> | <b>62.0</b> | <b>72.2</b> | <b>81.7</b>
+<b> Omnivore * </b> | <a href="https://openaccess.thecvf.com/content/CVPR2022/html/Girdhar_Omnivore_A_Single_Model_for_Many_Visual_Modalities_CVPR_2022_paper.html" target="_blank">CVPR’22</a> | <b>67.1</b> | <b>79.8</b> | -
 
 We also share our `LaTeX` comparison tables together with the `bibtext` file for SUN RGB-D and NYUV2 benchmarking (see `LaTeX` <a href="https://github.com/acaglayan/MMSNet/tree/main/latex">directory</a>). Feel free to use them.
 ## Citation
